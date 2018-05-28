@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>Apartment Search Form</title>
+   <style type ="text/css">
+   img{
+      width: 200px;
+   }
+
+   /* Entire Page */
+   body{
+      background-color: lightblue;
+   }
+
+   /* Renter's Styling */
+   .Renter{
+      background-color: LightSteelBlue;
+      border-color: MidnightBlue;
+   }
+
+   .Renter legend{
+      color: MidnightBlue;
+      font-weight: bold;
+      font-size: x-large;
+   }
+
+   label[for=smoker]
+   {
+      font-weight: normal;
+      color: DarkBlue;
+   }
+
+   label[for=pets]
+   {
+      color: DarkBlue;
+   }
+
+   label[for=specify]
+   {
+      font-weight: bold;
+   }
+
+   .Renter p{
+      font-weight: bold;
+   }
+
+   /* Searcher's Styling */
+   .Searcher{
+      background-color: Plum;
+      border-color: DarkMagenta;
+   }
+
+   .Searcher legend{
+      color: DarkMagenta;
+      font-weight: bold;
+      font-size: x-large;
+   }
+
+   .Searcher ul{
+      font-weight: bold;
+   }
+
+   label[for=size]{
+      font-weight:normal;
+      color: Indigo;
+   }
+
+   label[for=location]{
+      font-weight:normal;
+      color: Indigo;
+   }
+
+   label[for=cost]{
+      font-weight:normal;
+      color: Indigo;
+   }
+
+   label[for=additions]{
+      font-weight:normal;
+      color: Indigo;
+   }
+   /*Creating Table to place image on the left*/
+   /*table, td, td, th {
+         border: 1px solid black;
+   }*/
+
+   </style>
+</head>
+
+<body>
+<table>
+   <tr>
+      <td><a href="https://static1.squarespace.com/static/5326427ae4b0eeecbb67cf22/t/55e0b0c3e4b075a192d43bc6/1440788675856/?format=1000w">
+      <img src="https://static1.squarespace.com/static/5326427ae4b0eeecbb67cf22/t/55e0b0c3e4b075a192d43bc6/1440788675856/?format=1000w"
+         alt="For Rent Image"></a>
+      </td>
+      <td>
+         <h1>Airi's Apartment Search Form</h1>
+      </td>
+   </tr>
+</table>
+
+
+<form>
+      <fieldset class="Renter">
+         <legend>Renter(s) information</legend>
+         <p>How many people will live in the apartment?<input type="number"></p>
+         <p>Smoker?
+            <label for="smoker">Yes</label>
+            <input type="radio" name="smoker">
+            <label for="smoker">No</label>
+            <input type="radio" name="smoker"></p>
+         <p>Any pets?</p>
+         <input type="checkbox" name="pets"><label for="pets">Cat(s)</label><br>
+         <input type="checkbox" name="pets"><label for="pets">Dog(s)</label><br>
+         <input type="checkbox" name="pets"><label for="pets">Other</label><label for="specify"> Specify:</label><input type="text"><br>
+         <input type="checkbox" name="pets"><label for="pets">No Pets</label><br>
+         <br>
+      </fieldset>
+</form>
+
+<form>
+      <fieldset class="Searcher">
+         <legend>What are you looking for?</legend>
+         <ul>
+            <li>Size of apartment:<br>
+               <label for ="size"><input type="checkbox" name="size">Studio <input type="checkbox" name="size">3&frac12;
+               <input type="checkbox" name="size">4&frac12; <input type="checkbox" name="size">5&frac12;
+               <input type="checkbox" name="size">More than 5&frac12;
+               </label>
+            </li>
+            <br>
+            <li>Do you have preferred locations?<br>
+               <label for = "location">
+               <input type="checkbox" name="location">West Island <input type="checkbox" name="location">Downtown
+               <input type="checkbox" name="location">Lower Westmount <input type="checkbox" name="location">NDG
+               <input type="checkbox" name="location">East end of Island <input type="checkbox" name="location">Don't care
+               </label>
+            </li>
+            <br>
+            <li> Price Range/month:<br>
+               <select>
+               <label for="cost">
+                  <option value="<$500">&lt;$500</option>
+                  <option value="<$1000">&lt;$1000</option>
+                  <option value="<$1500">&lt;$1500</option>
+                  <option value="No Price Limit">No Price Limit</option>
+               </label>
+               </select>
+            </li>
+            <br>
+            <li>Would be nice to have<br>
+               <label for="additions">
+               <input type="checkbox" name="additions">Fire place <input type="checkbox" name="additions">Laundromat in building
+               <input type="checkbox" name="additions">Indoor Parking <input type="checkbox" name="additions">Output Parking
+               <input type="checkbox" name="additions">Balcony
+               </label>
+            </li>
+         </ul>
+         <br>
+      </fieldset>
+</form>
+<br>
+Let's see what we can find ...<br><br>
+<button type="submit">Search </button> <button type="reset">Start Over</button>
+
+</body>
+
+</html>

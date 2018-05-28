@@ -1,0 +1,38 @@
+form {
+   margin-right: 900px;
+   border: 2px solid black;
+   font-size: 10px;
+   background-color: AliceBlue;
+}
+
+label {
+   padding: 6px;
+   border-right: 2px solid black;
+   display: inline-block;
+   text-align: left;
+   width: 100px;
+}
+
+#input-string {
+   display: inline-block;
+   text-align: left;
+   margin-top: 3px;
+   margin-bottom: 3px;
+}
+
+#upper-line {
+   border: 1px solid black;
+   color: yellow;
+}
+
+#bottom-line {
+   border: 1px solid black;
+}
+
+#same-colour {
+   background-color: lightyellow;
+}
+
+button {
+   margin: 5px;
+}

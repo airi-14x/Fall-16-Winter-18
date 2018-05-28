@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <title>ATM</title>
+</head>
+<body>
+<form>
+   <input type="text" placeholder="Enter Withdrawal Amount" id="w_amount">
+   <button type="button" id="Submit" onclick="validateAmount()">Submit</button>
+</form>
+
+<script>
+var balance = 500; // Initial balance is 500 //
+
+function validateAmount(){
+   var w_amount = document.getElementById("w_amount").value;
+   if(isNaN(w_amount))
+      alert("Please enter numeric value");
+   else {
+         withdrawAmount(w_amount);
+   }
+
+}
+function withdrawAmount(w_amount){
+
+   w_amount = parseFloat(w_amount);
+   if (balance - w_amount < 0.50)
+   {
+      alert("Insufficient funds");
+   }
+
+   else if((w_amount % 20) != 0)
+   {
+      alert("Not multiple of 20: \"Incorrect withdraw amount\"");
+   }
+
+   else{
+      balance = balance - w_amount - 0.50; // Includes service fee: $0.50
+      alert(" \"Successful transaction! \n Current Balance is: " + balance);
+   }
+
+}
+</script>
+</body>
+</html>

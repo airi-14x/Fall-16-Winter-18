@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <title># of Vowels</title>
+   <script>
+      function StringStats(sentence) {
+         var sentence = prompt("Please enter sentence to parse: ");
+         var temp_sentence = sentence; // Modified sentence, used to counter #words.
+         word_array = []; //Array to store each word in a position. Delimiter was spaces.
+         vowel_counter = []; //Array that will increment the counter when it encounters a vowel.
+         var numWords = 0;
+         var moreWords = true; // There are more words to be read.
+
+         if (sentence == null || sentence == "") {
+            alert("Error. Null or Empty sentence.");
+         } else {
+            alert("valid");
+
+            while (moreWords == true) {
+               if (temp_sentence.search(/\s/i) != -1) // There's a whitespace.
+               {
+                  numWords++;
+                  temp_sentence = temp_sentence.substring(temp_sentence.search(/\s/i) + 1); //Delete trailing whitespace.
+               } else {
+                  moreWords = false;
+                  numWords++; // Last word wasn't accounted for because it didn't have a whitespace at the end.
+               }
+
+            }
+            alert(numWords);
+
+            for (var i = 0; i < numWords; i++) {
+               if (sentence.search(/\s/i) != -1) // There's a whitespace.
+               {
+                  var current_word = sentence.substring(0, sentence.search(/\s/i));
+                  word_array.push(current_word);
+                  sentence = sentence.substring(sentence.search(/\s/i) + 1);
+               } else { // At Last word //
+                  word_array.push(sentence);
+               }
+            }
+            // Checking for vowels //
+            for (var i = 0; i < word_array.length; i++) {
+               var check_word = word_array[i].match(/[aeiou]/g); // Is there a vowel?
+               if (check_word != null) {
+                  vowel_counter[i] = check_word.length;
+               } else {
+                  vowel_counter[i] = 0;
+               }
+            }
+
+            // Displaying //
+            document.getElementById("tester").innerHTML = "String Statistics: </br>";
+            for (var i = 0; i < word_array.length; i++) {
+               for (var j = 0; j < vowel_counter.length; j++) {
+                  if (i == j && vowel_counter[j] == 1) {
+                     document.getElementById("tester").innerHTML += word_array[i] + " contains " + vowel_counter[j] + " vowel</br>";
+
+                  }
+
+                  if (i == j && vowel_counter[j] != 1) {
+                     document.getElementById("tester").innerHTML += word_array[i] + " contains " + vowel_counter[j] + " vowels</br>";
+                  }
+               }
+            }
+
+         }
+
+
+      }
+   </script>
+</head>
+
+<body>
+   <div id="tester"> </div>
+   <script>
+      var sentence = "";
+      StringStats(sentence);
+   </script>
+</body>
+
+</html>

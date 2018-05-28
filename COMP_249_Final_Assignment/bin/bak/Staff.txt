@@ -1,0 +1,8 @@
+6667668	Maria	Hall		Longueuil	1993	52000	B
+7718476	Anna	Josh		Montreal	1998	61700	C
+8484800	Victor	Samuel		Blainville	2002	48990	A
+1204042	Mike	Peter		NDG		2016	55900	A
+9999547	Phill	Mateo		Anjou		2004	73000	D	
+4309470	Ted	Evan		Montreal	2000	58000	A
+2666549 Maya	Aaron		Brossard	1980	54000	B
+7003008	Lucy	Carson		Anjou		2009	73000	C

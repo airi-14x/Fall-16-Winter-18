@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>Apartment Search Form</title>
+</head>
+
+<body>
+<h1>Airi's Apartment Search Form</h1>
+<form>
+      <fieldset>
+         <legend>Renter(s) information</legend>
+         How many people will live in the apartment?<input type="number"><br>
+         <br>
+         Smoker? <input type="radio" name="smoker">Yes <input type="radio" name="smoker">No<br>
+         <br>
+         Any pets? <br>
+         <input type="checkbox" name="pets">Cat(s)<br>
+         <input type="checkbox" name="pets">Dog(s)<br>
+         <input type="checkbox" name="pets">Other Specify: <input type="text"><br>
+         <input type="checkbox" name="pets">No Pets<br>
+         <br>
+      </fieldset>
+</form>
+
+<form>
+      <fieldset>
+         <legend>What are you looking for?</legend>
+         <ul>
+            <li>Size of apartment<br>
+               <input type="checkbox" name="size">Studio <input type="checkbox" name="size">3&frac12;
+               <input type="checkbox" name="size">4&frac12; <input type="checkbox" name="size">5&frac12;
+               <input type="checkbox" name="size">More than 5&frac12;
+            </li>
+            <br>
+            <li>Do you have preferred locations?<br>
+               <input type="checkbox" name="location">West Island <input type="checkbox" name="location">Downtown
+               <input type="checkbox" name="location">Lower Westmount <input type="checkbox" name="location">NDG
+               <input type="checkbox" name="location">East end of Island <input type="checkbox" name="location">Don't care
+            </li>
+            <br>
+            <li> Price Range/month:<br>
+               <select>
+                  <option value="<$500">&lt;$500</option>
+                  <option value="<$1000">&lt;$1000</option>
+                  <option value="<$1500">&lt;$1500</option>
+                  <option value="No Price Limit">No Price Limit</option>
+               </select>
+            </li>
+            <br>
+            <li>Would be nice to have<br>
+               <input type="checkbox" name="additions">Fire place <input type="checkbox" name="additions">Laundromat in building
+               <input type="checkbox" name="additions">Indoor Parking <input type="checkbox" name="additions">Output Parking
+               <input type="checkbox" name="additions">Balcony
+            </li>
+         </ul>
+         <br>
+      </fieldset>
+</form>
+<br>
+Let's see what we can find ...<br><br>
+<button type="submit">Search </button> <button type="reset">Start Over</button>
+
+</body>
+
+</html>

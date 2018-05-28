@@ -1,0 +1,6 @@
+353 Databases 4.0
+435 Software_Design 3.5
+333 Introduction_to_Management 3.0
+512 Software_Process 4.0
+432 Capstone_1 3.0
+456 Capstone_2 3.0

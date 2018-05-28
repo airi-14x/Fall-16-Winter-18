@@ -1,0 +1,24 @@
+<script>
+   //You can easily use numbers in x
+   var x = "aabccddddeeffb".split("");
+
+   var histElements = {
+      x: x,
+      type: 'histogram',
+      marker: {color: '#FFC300',},
+   };
+
+   var layout = {
+      bargap: 0.05,
+      bargroupgap: 0.5,
+      barmode: "overlay",
+      title: "Histogram",
+      xaxis: {title: "Values",},
+      yaxis: {title: "Count"},
+   };
+
+   var data = [histElements];
+
+   //Using ID for div to plot the graph
+   Plotly.newPlot('graph', data, layout);
+ </script>

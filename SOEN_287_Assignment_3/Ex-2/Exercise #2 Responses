@@ -1,0 +1,11 @@
+
+Exercise #2:
+
+1- Query string is part of a URL. Entering the URL will pass the query string to the server
+   where it will parse the query part.
+
+2- Query string is a characteristic of a GET request method.
+
+3- Everything after the "?".
+
+4- 3 different data parameters are being passed: age, name, number.

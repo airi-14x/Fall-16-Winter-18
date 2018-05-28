@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <title>Histogram</title>
+   <link rel="stylesheet" type="text/css" href="style_q3.css">
+   <!--Include the java library for plotly-->
+   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+
+<body>
+   <form>
+      <div id="same-colour">
+         <label for="input-string">Input String:</label>
+         <input type="text" name="i_string" id="input-string" onblur="inputdata1()"><br>
+      </div>
+      <div id="upper-line"></div>
+      <label for="input-word">Input Word:</label>
+      <input type="text" name="i_word" id="input-word" onblur="inputdata2()"><br>
+      <div id="bottom-line"></div>
+      <div id="same-colour">
+         <button name="plot" onclick="plotHistogram()">Plot Histogram</button>
+      </div>
+   </form>
+   <div id="histogram_plot" style="width:600px;height:250px;">
+   </div>
+   <script>
+      var i_string = document.getElementById("input-string").value;
+      var string_array = []; // Will be used to iterated through.
+      var word_array = []; // Store each letter in a array position.
+      var counter_array = []; // Keep track of #times the letter appears in the string.
+      // Parsing info for string //
+      function inputdata1() {
+         var i_string = document.getElementById("input-string").value;
+         for (var i = 0; i < i_string.length; i++) {
+            var temp = i_string.substr(i, 1);
+            string_array.push(temp);
+         }
+
+      }
+
+      // Parsing info for word //
+      function inputdata2() {
+         var i_word = document.getElementById("input-word").value;
+         for (var i = 0; i < i_word.length; i++) {
+            var temp = i_word.substr(i, 1);
+            word_array.push(temp);
+            counter_array.push(0);
+         }
+         word_array.sort();
+
+      }
+
+      function plotHistogram() {
+
+         for (var i = 0; i < string_array.length; i++) {
+            for (var j = 0; j < word_array.length; j++) {
+
+               if (string_array[i] == word_array[j]) {
+                  counter_array[j] += 1;
+               }
+            }
+         }
+
+         /* The arrays to display are correct. I just cannot seem to get Plotly to work
+            with it. I wanted the x axis and y axis to be updated with the ones I have...
+            But, it's only working if Plotly is outside of the function.
+         */
+
+         alert(word_array[0]);
+         alert(counter_array[0]);
+         alert(word_array[1]);
+         alert(counter_array[1]);
+         alert(word_array[2]);
+         alert(counter_array[2]);
+         alert(word_array[3]);
+         alert(counter_array[3]);
+         alert(word_array[4]);
+         alert(counter_array[4]);
+         alert(word_array[5]);
+         alert(counter_array[5]);
+         
+
+         x = word_array;
+         y = counter_array;
+         data = [{
+            x: word_array,
+            y: counter_array,
+            type: 'histogram',
+
+         }];
+
+         //Using ID for div to plot the graph
+         Plotly.update('histogram_plot', data);
+         Plotly.redraw('histogram_plot');
+         //alert("Here2?");
+
+      }
+      x = word_array;
+      y = counter_array;
+      data = [{
+         x: word_array,
+         y: counter_array,
+         type: 'histogram',
+
+      }];
+
+      //Using ID for div to plot the graph
+      Plotly.newPlot('histogram_plot', data);
+   </script>
+</body>
+
+</html>

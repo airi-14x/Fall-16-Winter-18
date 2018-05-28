@@ -1,0 +1,8 @@
+7875493	Linda	Davis		Brossard	1998	132000
+8379288	Mark	Davidson	Montreal	1989	152000
+7638686	Simon	Jackson		Laval		2008	98000
+2898908	Jane	Jhonson		NDG		2002	117000
+4399898	Peter	Lee		Anjou		2007	99000	
+9897735	Mike	Simson		Montreal	1982	184000
+3676580 Sam	Mandy		Brossard	1982	252000
+9084649	Tara	Richard		Montreal	2005	102000
